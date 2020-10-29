@@ -18,6 +18,8 @@ foreach ($request_json['events'] as $event)
 			
 			$reply_message = "Tippawan";
 			
+			$reply_message = mySQL_selectAll('http://s61160287.kantit.com/json_select_users.php');
+			
 		} else {
 			$reply_message = 'ฉันได้รับ '.$event['message']['type'].' ของคุณแล้ว!';
 		}
